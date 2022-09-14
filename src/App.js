@@ -1,9 +1,22 @@
 function App() {
   return (
-    <div>
-      <h1>hello world</h1>
-      <p>hello</p>
-    </div>
+    <main>
+      <section className="container">
+        <h1>monstros</h1>
+        
+        <article className="monstros">
+          <img src="https://robohash.org/1?set=set2" alt="monstro" />
+          <div>
+            <h2>nome</h2>
+            <p>email</p>
+          </div>
+        </article>
+
+        <button className="btn-azul" type="button">
+          limpar monstros
+        </button>
+      </section>
+    </main>
   );
 }
 

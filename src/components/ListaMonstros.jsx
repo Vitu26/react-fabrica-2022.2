@@ -6,7 +6,7 @@ const ListaMonstros = (props) => {
   return (
     <>
       {dados.map((objeto) => {
-        return <Monstro monstroUnico={objeto} />;
+        return <Monstro key={objeto.id} monstroUnico={objeto} />;
       })}
     </>
   );

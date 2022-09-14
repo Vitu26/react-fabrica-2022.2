@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ButtonLimpar from "./components/ButtonLimpar";
 import ListaMonstros from "./components/ListaMonstros";
 
 function App() {
@@ -21,9 +22,7 @@ function App() {
 
         <ListaMonstros dados={dados} />
 
-        <button className="btn-azul" type="button" onClick={apagarDados}>
-          limpar monstros
-        </button>
+        <ButtonLimpar apagarDados={apagarDados} />
       </section>
     </main>
   );

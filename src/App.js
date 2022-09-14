@@ -11,17 +11,24 @@ function App() {
 
         {dadosFake.map((objeto) => {
           return (
-            <article className="monstros">
-              <img src="https://robohash.org/1?set=set2" alt="monstro" />
+            <article key={objeto.id} className="monstros">
+              <img src={objeto.image} alt={objeto.name} />
               <div>
-                <h2>nome</h2>
-                <p>email</p>
+                <h2>{objeto.name}</h2>
+                <p>{objeto.email}</p>
               </div>
             </article>
           );
         })}
 
-        <button className="btn-azul" type="button">
+        <button
+          className="btn-azul"
+          type="button"
+          onClick={() => {
+            console.log("clicando aqui");
+            setDadosFake([])
+          }}
+        >
           limpar monstros
         </button>
       </section>

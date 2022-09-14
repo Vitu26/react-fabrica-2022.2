@@ -1,21 +1,22 @@
 import { useEffect, useState } from "react";
-import dados from "./dados/dadosFake";
 
 function App() {
-  const [dadosFake, setDadosFake] = useState(dados);
+  const [dados, setDados] = useState([]);
 
   const apagarDados = () => {
-    setDadosFake([]);
+    setDados([]);
   };
 
-  
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users");
+  }, []);
 
   return (
     <main>
       <section className="container">
-        <h1>{dadosFake.length} monstros</h1>
+        <h1>{dados.length} monstros</h1>
 
-        {dadosFake.map((objeto) => {
+        {dados.map((objeto) => {
           return (
             <article key={objeto.id} className="monstros">
               <img src={objeto.image} alt={objeto.name} />

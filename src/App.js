@@ -1,9 +1,11 @@
+import dados from "./dados/dadosFake";
+
 function App() {
   return (
     <main>
       <section className="container">
         <h1>monstros</h1>
-        
+
         <article className="monstros">
           <img src="https://robohash.org/1?set=set2" alt="monstro" />
           <div>

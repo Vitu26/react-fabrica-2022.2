@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
-      .then((dadosAPI) => setDados(dadosAPI));
+      .then((dadosAPI) => setDados(dadosAPI.slice(0, 5)));
   }, []);
 
   return (
@@ -21,7 +21,10 @@ function App() {
         {dados.map((objeto) => {
           return (
             <article key={objeto.id} className="monstros">
-              <img src={objeto.image} alt={objeto.name} />
+              <img
+                src={`https://robohash.org/${objeto.id}?set=set2`}
+                alt={objeto.name}
+              />
               <div>
                 <h2>{objeto.name}</h2>
                 <p>{objeto.email}</p>

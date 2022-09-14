@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import dados from "./dados/dadosFake";
 
 function App() {
   const [dadosFake, setDadosFake] = useState(dados);
 
+  const apagarDados = () => {
+    setDadosFake([]);
+  };
+
+  
+
   return (
     <main>
       <section className="container">
-        <h1>monstros</h1>
+        <h1>{dadosFake.length} monstros</h1>
 
         {dadosFake.map((objeto) => {
           return (
@@ -21,14 +27,7 @@ function App() {
           );
         })}
 
-        <button
-          className="btn-azul"
-          type="button"
-          onClick={() => {
-            console.log("clicando aqui");
-            setDadosFake([])
-          }}
-        >
+        <button className="btn-azul" type="button" onClick={apagarDados}>
           limpar monstros
         </button>
       </section>

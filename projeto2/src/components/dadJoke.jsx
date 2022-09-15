@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function DadsJoke() {
+function DadJoke() {
   const [joke, setJoke] = useState("jokes here");
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function DadsJoke() {
 
   return (
     <div className="container">
-      <h1>Don't laugh challenge</h1>
+      <h1>Dad Joke</h1>
       <p className="joke">{joke}</p>
       <button type="button" className="btn" onClick={getJoke}>
         Get Another Joke
@@ -28,4 +28,4 @@ function DadsJoke() {
   );
 }
 
-export default DadsJoke;
+export default DadJoke;

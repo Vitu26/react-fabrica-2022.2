@@ -1,9 +1,9 @@
-import DadsJoke from "./components/dadsJoke";
+import DadJoke from "./components/dadJoke";
 
 function App() {
   return (
     <>
-      <DadsJoke />
+      <DadJoke />
     </>
   );
 }

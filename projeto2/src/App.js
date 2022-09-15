@@ -4,12 +4,17 @@ function App() {
   const [joke, setJoke] = useState("jokes here");
 
   useEffect(() => {
-    getJoke()
+    getJoke();
   }, []);
 
   const getJoke = async () => {
-    const response = await fetch("https://icanhazdadjoke.com/");
-    console.log(response)
+    const response = await fetch("https://icanhazdadjoke.com/", {
+      headers: {
+        Accept: "application/json",
+      },
+    });
+    const data = await response.json();
+    setJoke(data.joke);
   };
 
   return (

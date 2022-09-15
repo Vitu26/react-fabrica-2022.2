@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [joke, setJoke] = useState("jokes here");
 
-  const [joke, setJoke] = useState("jokes here")
+  useEffect(() => {
+    getJoke()
+  }, []);
 
-  
+  const getJoke = async () => {
+    const response = await fetch("https://icanhazdadjoke.com/");
+    console.log(response)
+  };
 
   return (
     <div className="container">

@@ -21,7 +21,7 @@ function App() {
     <div className="container">
       <h1>Don't laugh challenge</h1>
       <p className="joke">{joke}</p>
-      <button className="btn" onClick={getJoke}>
+      <button type="button" className="btn" onClick={getJoke}>
         Get Another Joke
       </button>
     </div>
